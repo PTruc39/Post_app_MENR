@@ -17,7 +17,10 @@ const userSchema = new Schema ({
         required: true,
         minlength:6
     },
-    blogs: [{ type: mongoose.Types.ObjectId, ref: "Blog", required: true }]
+    blogs: [{ type: mongoose.Types.ObjectId, ref: "Blog", required: true }],
+    verifytoken:{
+        type: String,
+    }
 });
 
 module.exports=mongoose.model("User",userSchema);
